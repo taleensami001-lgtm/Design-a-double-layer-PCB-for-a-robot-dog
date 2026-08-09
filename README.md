@@ -70,7 +70,7 @@
 * When converting the schematic to a PCB, dimensions are set (Rectangular, Width 75 mm, Height 35 mm).
 * A 2-layer copper board is selected to meet task requirements.
 
-![img alt]()
+![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/9c9a332d8e4907ae19c72f3a6c3db107f7bba24a/Screenshot%202026-08-09%20113027.png)
 
 #### **الخطوة 7: الترتيب الفيزيائي للمكونات / Step 7: Physical Component Placement**
 
