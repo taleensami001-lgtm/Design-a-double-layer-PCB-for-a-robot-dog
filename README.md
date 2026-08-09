@@ -39,8 +39,8 @@
 * Search for two-pin connectors using "connector 2P" and select "2.0-2P ZZDK-R PCB CONNECTOR".
 * Place the first connector (CN1), followed by the second connector (CN2).
 
+![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/2b74cb42954c13b8396943b19787d942a72172e7/Screenshot%202026-08-08%20185122.png)
 ![img alt]()
-
 #### **الخطوة 4: التوصيل الكهربائي الأولي (Power Wiring) / Step 4: Initial Power Wiring**
 
 * تُوصل أطراف الموصلين (CN1 و CN2) بمداخل وحدة الطاقة (VIN- و VIN+).
