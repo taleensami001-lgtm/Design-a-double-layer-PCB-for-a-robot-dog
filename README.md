@@ -79,7 +79,7 @@
 * Place the Arduino (U1) centrally, with the power module (M1) and connectors (CN1, CN2) at the bottom.
 * The servo ports (U2-U5) are aligned at the top, and a 6-pin sensor port (U6) is placed in the top right corner.
 
-  ![img alt]()
+  ![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/efe3ae4a3ae4de01a578466f9fb0d2fffbe8e4d0/Screenshot%202026-08-09%20115640.png)
 
 #### **الخطوة 8: رسم المسارات وصب النحاس / Step 8: Routing and Copper Pour**
 
