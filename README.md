@@ -52,7 +52,7 @@
 * For organization, Ground (GND) symbols are added to the VOUT- net and Arduino pin 4.
 
 ![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/d8b3ddaa2bc08ed980cfed19e624b960373fcaa1/Screenshot%202026-08-08%20194557.png)
-![img alt]()
+
 
 #### **الخطوة 5: توصيل منافذ السيرفو / Step 5: Connecting Servo Ports**
 
@@ -60,7 +60,7 @@
 * تُوصل دبابيس الطاقة للأربعة منافذ بالخطوط المشتركة للجهد والتأريض، بينما تُوصل دبابيس الإشارة بالمنافذ الرقمية للأردوينو (مثل D2, D3, D4, D5).
 * Four 3x1 headers (U2, U3, U4, U5) are added to represent the servo motor ports.
 * The power pins of the four ports are tied to the common power and ground rails, while the signal pins are routed to the Arduino's digital pins (e.g., D2, D3, D4, D5).
-![img alt]()
+![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/d9799514620b7556c09a93994cb6ec4379bc7a59/Screenshot%202026-08-08%20202813.png)
 
 
 #### **الخطوة 6: إعداد أبعاد اللوحة / Step 6: Board Dimensions Setup**
