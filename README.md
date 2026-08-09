@@ -88,7 +88,7 @@
 * The top layer (red) and bottom layer (blue) are used to route traces between components without short circuits.
 * A red copper pour is applied over the empty board areas to minimize electrical noise.
 
-![img alt]()
+![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/a0557c04e2c4aa798585c98510bbed5bd6ae46a9/Screenshot%202026-08-09%20143110.png)
 #### **الخطوة 9: المعاينة ثلاثية الأبعاد / Step 9: 3D Visualization**
 
 * للتحقق من المظهر النهائي، يتم النقر على أيقونة "3D" في شريط الأدوات العلوي.
