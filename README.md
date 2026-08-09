@@ -51,6 +51,7 @@
 * The MT3608 outputs (VOUT- and VOUT+) are wired to Arduino pins 29 (GND) and 27 (+5V) respectively.
 * For organization, Ground (GND) symbols are added to the VOUT- net and Arduino pin 4.
 
+![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/d8b3ddaa2bc08ed980cfed19e624b960373fcaa1/Screenshot%202026-08-08%20194557.png)
 ![img alt]()
 
 #### **الخطوة 5: توصيل منافذ السيرفو / Step 5: Connecting Servo Ports**
