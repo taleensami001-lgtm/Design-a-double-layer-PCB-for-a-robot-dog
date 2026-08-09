@@ -27,6 +27,7 @@
 * For power management, search for and select the "mt3608" module.
 * The boost converter module (M1), labeled "MT3608 2A BOOST MODULE", is placed next to the microcontroller.
 
+![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/2502269a388fa6483fde853d44a60df21ae4ba6e/Screenshot%202026-08-08%20183716.png)
 ![img alt]()
 
 #### **الخطوة 3: إضافة منافذ الطاقة / Step 3: Adding Power Connectors**
