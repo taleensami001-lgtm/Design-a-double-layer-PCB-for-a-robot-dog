@@ -14,7 +14,8 @@
 * A blank schematic sheet named (Sheet_1) opens with a grid to facilitate component placement.
 
 ![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/da23aa2d2da2e780a91a0f2b779c0f4b6f187d45/Screenshot%202026-08-08%20152418.png)
-![img alt]()
+![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/a5342aeb99c68b5c94c112182042ada3d35933c8/Screenshot%202026-08-08%20153036.png)
+
 #### **الخطوة 2: إدراج المكونات الأساسية / Step 2: Inserting Main Components**
 
 * باستخدام محرك البحث، يتم البحث عن "arduino" واختيار "ARDUINO_NANO" من مكتبة LCSC.
