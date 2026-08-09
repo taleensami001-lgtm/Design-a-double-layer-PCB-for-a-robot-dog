@@ -1,52 +1,93 @@
 
-#### **الخطوة الأولى: تحليل متطلبات المهمة / Step 1: Analyzing Task Requirements**.
+## الدليل الشامل لتصميم لوحة إلكترونية لكلب روبوتي
 
-* **المهمة:** تصميم لوحة PCB خاصة بكلب روبوتي بحيث تكون اللوحة مزدوجة الطبقات (Double Layer PCB).
-* **المكونات المطلوبة:** يجب أن تحتوي اللوحة على متحكم (Arduino Nano أو ESP32)، وأربعة منافذ لتوصيل محركات السيرفو، ومنفذ للبطارية، ومنفذ إضافي لحساس، مع مراعاة ترتيبها بشكل منطقي.
-* **The Task:** Design a double-layer PCB for a robot dog.
-* **Required Components:** The board must include a controller (Arduino Nano or ESP32), four ports for servo motors, a battery port, and an additional sensor port, all arranged logically.
+## Comprehensive Guide: Robot Dog PCB Design
 
-#### **الخطوة الثانية: إعداد مساحة العمل واللوحة / Step 2: Board and Workspace Setup**
 
-يتم إنشاء مساحة عمل جديدة للوحة وضبط الأبعاد لتتناسب مع حجم المكونات.
+### **المرحلة الأولى: تصميم المخطط الإلكتروني (Phase 1: Schematic Design)**
 
-* تم تحديد وحدة القياس بالمليمتر (mm)، وتم اختيار شكل اللوحة ليكون مستطيلاً (Rectangular).
-* تم ضبط أبعاد اللوحة بحيث يكون العرض 75 مم والارتفاع 35 مم.
-* تم اختيار طبقتين من النحاس (Copper Layer: 2) لتلبية شرط المهمة باستخدام لوحة مزدوجة الطبقات.
-* The measurement unit is set to millimeters (mm), and a Rectangular board outline is selected.
-* The dimensions are configured to a width of 75 mm and a height of 35 mm.
-* Two copper layers (Copper Layer: 2) are selected to fulfill the task's double-layer requirement.
+#### **الخطوة 1: تهيئة مساحة العمل / Step 1: Workspace Initialization**
 
-#### **الخطوة الثالثة: ترتيب المكونات / Step 3: Component Placement**
+* من الواجهة الرئيسية لبرنامج EasyEDA (الوضع القياسي Standard Mode)، يتم النقر على "New Project" لإنشاء مشروع جديد.
+* تُفتح ورقة عمل فارغة باسم (Sheet_1) تحتوي على شبكة رسم لتسهيل وضع المكونات.
+* From the EasyEDA main interface (Standard Mode), click on "New Project".
+* A blank schematic sheet named (Sheet_1) opens with a grid to facilitate component placement.
 
-يتم إدراج المكونات وترتيبها بشكل منظم داخل حدود اللوحة لضمان سهولة التوصيل لاحقاً.
+![img alt]()
 
-* تم وضع متحكم Arduino Nano (المشار إليه بـ U1) في منتصف اللوحة.
-* تم ترتيب أربعة منافذ لمحركات السيرفو (U2, U3, U4, U5) في الجزء العلوي الأيسر.
-* تم وضع منفذ الحساس (U6) في الجزء العلوي الأيمن، بالإضافة لوحدة رفع الجهد MT3608 ومنافذ الطاقة (CN1, CN2) في مساحات مناسبة داخل الإطار البنفسجي للوحة.
-* The Arduino Nano microcontroller (labeled U1) is placed centrally on the board.
-* Four servo motor ports (U2, U3, U4, U5) are aligned neatly at the top left.
-* The sensor port (U6) is placed at the top right, while the MT3608 boost converter and power connectors (CN1, CN2) are positioned within the purple board outline.
+#### **الخطوة 2: إدراج المكونات الأساسية / Step 2: Inserting Main Components**
 
-#### **الخطوة الرابعة: توصيل المسارات / Step 4: Routing the Connections**
+* باستخدام محرك البحث، يتم البحث عن "arduino" واختيار "ARDUINO_NANO" من مكتبة LCSC.
+* يتم وضع رمز المتحكم (U1) في مساحة العمل.
+* لإدارة الطاقة، يتم البحث عن وحدة "mt3608" واختيارها.
+* يتم وضع وحدة رفع الجهد (M1) التي تحمل اسم "MT3608 2A BOOST MODULE" بجوار المتحكم.
+* Using the search engine, search for "arduino" and select "ARDUINO_NANO" from the LCSC library.
+* The microcontroller symbol (U1) is placed in the workspace.
+* For power management, search for and select the "mt3608" module.
+* The boost converter module (M1), labeled "MT3608 2A BOOST MODULE", is placed next to the microcontroller.
 
-في هذه المرحلة، يتم رسم المسارات النحاسية لربط المكونات ببعضها كهربائياً.
+![img alt]()
 
-* تُستخدم الطبقة العلوية (TopLayer)، والموضحة باللون الأحمر، لتوصيل المسارات الأساسية بين الدبابيس.
-* تُستخدم الطبقة السفلية (BottomLayer)، والموضحة باللون الأزرق، لتفادي تقاطع الخطوط وإكمال الدائرة بشكل سليم.
-* The top layer (TopLayer), shown in red, is used for primary routing between component pins.
-* The bottom layer (BottomLayer), shown in blue, is utilized to avoid intersecting lines and properly complete the circuit.
+#### **الخطوة 3: إضافة منافذ الطاقة / Step 3: Adding Power Connectors**
 
-#### **الخطوة الخامسة: صب النحاس / Step 5: Copper Pour**
+* يتم البحث عن موصلات ثنائية باستخدام "connector 2P" واختيار "2.0-2P ZZDK-R PCB CONNECTOR".
+* يتم وضع الموصل الأول (CN1)، ثم يضاف الموصل الثاني (CN2).
+* Search for two-pin connectors using "connector 2P" and select "2.0-2P ZZDK-R PCB CONNECTOR".
+* Place the first connector (CN1), followed by the second connector (CN2).
 
-* تمت إضافة طبقة صب نحاس (Copper Pour) باللون الأحمر تغطي المساحات الفارغة من اللوحة، وهو إجراء يُستخدم غالباً لتحسين الأداء الكهربائي وتقليل التشويش.
-* A red copper pour is applied to cover the empty areas of the board, a common practice used to enhance electrical performance and reduce noise.
+![img alt]()
 
-#### **الخطوة السادسة: العرض ثلاثي الأبعاد / Step 6: 3D Visualization**
+#### **الخطوة 4: التوصيل الكهربائي الأولي (Power Wiring) / Step 4: Initial Power Wiring**
 
-الخطوة الأخيرة هي معاينة التصميم للتأكد من المظهر الفيزيائي.
+* تُوصل أطراف الموصلين (CN1 و CN2) بمداخل وحدة الطاقة (VIN- و VIN+).
+* تُوصل مخارج وحدة MT3608 (وهي VOUT- و VOUT+) بدبابيس الأردوينو رقم 29 (GND) ورقم 27 (+5V) على التوالي.
+* للتنظيم، يتم إضافة رموز التأريض (GND) لمسار VOUT- وللدبوس رقم 4 في الأردوينو.
+* The pins of connectors (CN1 and CN2) are wired to the power module inputs (VIN- and VIN+).
+* The MT3608 outputs (VOUT- and VOUT+) are wired to Arduino pins 29 (GND) and 27 (+5V) respectively.
+* For organization, Ground (GND) symbols are added to the VOUT- net and Arduino pin 4.
 
-* من خلال شريط الأدوات العلوي، يتم الضغط على خيار "3D" لإنشاء نموذج مجسم.
-* يعرض النموذج ثلاثي الأبعاد اللوحة بلون أزرق، وتظهر المكونات مثل متحكم Arduino Nano، والدبابيس، وأماكن لحام MT3608 مثبتة في أماكنها الصحيحة للتحقق من عدم وجود تداخل فيزيائي.
-* Using the top toolbar, the "3D" option is clicked to generate a physical model.
-* The 3D model renders a blue PCB showing components like the Arduino Nano, header pins, and MT3608 solder pads properly mounted, verifying that there are no physical collisions.
+![img alt]()
+
+#### **الخطوة 5: توصيل منافذ السيرفو / Step 5: Connecting Servo Ports**
+
+* تُضاف أربعة منافذ رأسية (Headers 3x1) بأسماء (U2, U3, U4, U5) لتمثيل محركات السيرفو.
+* تُوصل دبابيس الطاقة للأربعة منافذ بالخطوط المشتركة للجهد والتأريض، بينما تُوصل دبابيس الإشارة بالمنافذ الرقمية للأردوينو (مثل D2, D3, D4, D5).
+* Four 3x1 headers (U2, U3, U4, U5) are added to represent the servo motor ports.
+* The power pins of the four ports are tied to the common power and ground rails, while the signal pins are routed to the Arduino's digital pins (e.g., D2, D3, D4, D5).
+![img alt]()
+
+
+#### **الخطوة 6: إعداد أبعاد اللوحة / Step 6: Board Dimensions Setup**
+
+* عند تحويل المخطط إلى PCB، يتم تحديد الأبعاد (مستطيل Rectangular، العرض 75 مم، الارتفاع 35 مم).
+* يتم اختيار لوحة بطبقتين نحاسيتين (Copper Layer 2) استجابة لمتطلبات المهمة.
+* When converting the schematic to a PCB, dimensions are set (Rectangular, Width 75 mm, Height 35 mm).
+* A 2-layer copper board is selected to meet task requirements.
+
+![img alt]()
+
+#### **الخطوة 7: الترتيب الفيزيائي للمكونات / Step 7: Physical Component Placement**
+
+* يتم وضع الأردوينو (U1) في المنتصف، ووحدة الطاقة (M1) مع الموصلات (CN1, CN2) في الأسفل.
+* تُرتب منافذ السيرفو (U2-U5) في الأعلى مع إضافة منفذ حساس سداسي الدبابيس (U6) في الزاوية العلوية اليمنى.
+* Place the Arduino (U1) centrally, with the power module (M1) and connectors (CN1, CN2) at the bottom.
+* The servo ports (U2-U5) are aligned at the top, and a 6-pin sensor port (U6) is placed in the top right corner.
+
+  ![img alt]()
+
+#### **الخطوة 8: رسم المسارات وصب النحاس / Step 8: Routing and Copper Pour**
+
+* يتم استخدام الطبقة العلوية الموضحة باللون الأحمر (TopLayer) والطبقة السفلية باللون الأزرق (BottomLayer) لرسم المسارات بين المكونات بدون تقاطعات.
+* تُضاف طبقة صب نحاس (Copper Pour) باللون الأحمر تملأ المساحات الفارغة من اللوحة لتقليل التشويش.
+* The top layer (red) and bottom layer (blue) are used to route traces between components without short circuits.
+* A red copper pour is applied over the empty board areas to minimize electrical noise.
+
+![img alt]()
+#### **الخطوة 9: المعاينة ثلاثية الأبعاد / Step 9: 3D Visualization**
+
+* للتحقق من المظهر النهائي، يتم النقر على أيقونة "3D" في شريط الأدوات العلوي.
+* تظهر اللوحة مجسمة باللون الأزرق الداكن، حيث تظهر دبابيس الأردوينو وأماكن لحام MT3608 ومنافذ التوصيل بشكلها الفيزيائي الواقعي، مما يؤكد صحة التصميم.
+* To verify the final look, click the "3D" icon in the top toolbar.
+* The board renders in 3D with a dark blue solder mask, displaying the Arduino pins, MT3608 pads, and connectors in their physical form, confirming the design's accuracy.
+
+  ![img alt]()
