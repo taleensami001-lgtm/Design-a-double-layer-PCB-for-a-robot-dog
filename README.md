@@ -97,5 +97,3 @@
 * The board renders in 3D with a dark blue solder mask, displaying the Arduino pins, MT3608 pads, and connectors in their physical form, confirming the design's accuracy.
 
   ![img alt](https://github.com/taleensami001-lgtm/Design-a-double-layer-PCB-for-a-robot-dog/blob/b3b55179623e55532b82f437488a32b138303bb3/Screenshot%202026-08-09%20143616.png)
-
-  ![img alt]()
